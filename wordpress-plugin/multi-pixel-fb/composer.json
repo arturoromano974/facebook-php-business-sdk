@@ -1,0 +1,44 @@
+{
+    "name": "arturoromano974/multi-pixel-fb",
+    "description": "WordPress plugin para enviar eventos de conversão para múltiplos Facebook Pixels simultaneamente com geotargeting automático",
+    "type": "wordpress-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Arturo Romano",
+            "email": "arturoromano974@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "facebook/php-business-sdk": "^24.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "mockery/mockery": "^1.3",
+        "yoast/phpunit-polyfills": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MultiPixelFB\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MultiPixelFB\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --configuration tests/phpunit.xml",
+        "test:unit": "phpunit --configuration tests/phpunit.xml --testsuite unit"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
